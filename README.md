@@ -26,12 +26,12 @@ For each of the following exercises, provide the appropriate query.
 
 Keep your successful queries in a `chinook.sql` file.
 
-1. Provide a query showing Customers (just their full names, customer ID and country) who are not in the US.
-2. Provide a query only showing the Customers from Brazil.
-3. Provide a query showing the Invoices of customers who are from Brazil. The resultant table should show the customer's full name, Invoice ID, Date of the invoice and billing country.
-4. Provide a query showing only the Employees who are Sales Agents.
-5. Provide a query showing a unique list of billing countries from the Invoice table.
-6. Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name.
+1. :heavy_check_mark: Provide a query showing Customers (just their full names, customer ID and country) who are not in the US.
+2. :heavy_check_mark: Provide a query only showing the Customers from Brazil.
+3. :heavy_check_mark: Provide a query showing the Invoices of customers who are from Brazil. The resultant table should show the customer's full name, Invoice ID, Date of the invoice and billing country.
+4. :heavy_check_mark: Provide a query showing only the Employees who are Sales Agents.
+5. :heavy_check_mark: Provide a query showing a unique list of billing countries from the Invoice table.
+6. :question: Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name.
 7. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.
 8. How many Invoices were there in 2009 and 2011? What are the respective total sales for each of those years?
 9. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for Invoice ID 37.
