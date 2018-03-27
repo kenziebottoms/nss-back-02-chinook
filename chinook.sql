@@ -26,8 +26,10 @@ SELECT * FROM Employee
 WHERE Title LIKE "%Sale%Agent%";
 
 -- 5. Provide a query showing a unique list of billing countries from the Invoice table.
+SELECT BillingCountry FROM Invoice GROUP BY BillingCountry;
 
 -- 6. Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name.
+-- How are any Employees associated with Invoices? Not seeing this.
 
 -- 7. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.
 
