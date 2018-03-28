@@ -31,11 +31,11 @@ Keep your successful queries in a `chinook.sql` file.
 3. :heavy_check_mark: Provide a query showing the Invoices of customers who are from Brazil. The resultant table should show the customer's full name, Invoice ID, Date of the invoice and billing country.
 4. :heavy_check_mark: Provide a query showing only the Employees who are Sales Agents.
 5. :heavy_check_mark: Provide a query showing a unique list of billing countries from the Invoice table.
-6. :question: Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name.
-7. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.
-8. How many Invoices were there in 2009 and 2011? What are the respective total sales for each of those years?
-9. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for Invoice ID 37.
-10. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for each Invoice. HINT: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
+6. :heavy_check_mark: Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name.
+7. :heavy_check_mark: Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.
+8. :heavy_check_mark: How many Invoices were there in 2009 and 2011? What are the respective total sales for each of those years?
+9. :heavy_check_mark: Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for Invoice ID 37.
+10. :heavy_check_mark: Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for each Invoice. HINT: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
 11. Provide a query that includes the track name with each invoice line item.
 12. Provide a query that includes the purchased track name AND artist name with each invoice line item.
 13. Provide a query that shows the # of invoices per country. HINT: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
