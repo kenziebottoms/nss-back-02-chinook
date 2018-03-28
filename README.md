@@ -46,8 +46,8 @@ Keep your successful queries in a `chinook.sql` file.
 18. :heavy_check_mark: Which sales agent made the most in sales in 2009?
 19. :heavy_check_mark: Which sales agent made the most in sales in 2010?
 20. :heavy_check_mark: Which sales agent made the most in sales over all?
-21. Provide a query that shows the # of customers assigned to each sales agent.
-22. Provide a query that shows the total sales per country. Which country's customers spent the most?
+21. :heavy_check_mark: Provide a query that shows the # of customers assigned to each sales agent.
+22. :heavy_check_mark: Provide a query that shows the total sales per country. Which country's customers spent the most?
 23. Provide a query that shows the most purchased track of 2013.
 24. Provide a query that shows the top 5 most purchased tracks over all.
 25. Provide a query that shows the top 3 best selling artists.

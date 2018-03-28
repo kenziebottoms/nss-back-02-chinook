@@ -163,8 +163,22 @@ GROUP BY EmployeeId
 ORDER BY Sales DESC;
 
 -- 21. Provide a query that shows the # of customers assigned to each sales agent.
+SELECT
+  e.EmployeeId,
+  e.FirstName || " " || e.LastName as Employee,
+  COUNT(*)
+FROM Customer c
+JOIN Employee e ON e.EmployeeId = c.SupportRepId
+GROUP BY e.EmployeeId;
 
 -- 22. Provide a query that shows the total sales per country. Which country's customers spent the most?
+  -- USA
+SELECT
+  BillingCountry,
+  SUM(Total)
+FROM Invoice
+GROUP BY BillingCountry
+ORDER BY SUM(Total) DESC;
 
 -- 23. Provide a query that shows the most purchased track of 2013.
 
