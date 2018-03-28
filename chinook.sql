@@ -92,10 +92,31 @@ FROM Invoice
 GROUP BY BillingCountry;
 
 -- 14. Provide a query that shows the total number of tracks in each playlist. The Playlist name should be included on the resultant table.
+SELECT
+  p.Name,
+  COUNT(*)
+FROM Playlist p
+LEFT JOIN PlaylistTrack pt ON pt.PlaylistId = p.PlaylistId
+GROUP BY pt.PlaylistId;
 
 -- 15. Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include the Album name, Media type and Genre.
+SELECT
+  t.Name AS Song,
+  a.Title as Album,
+  mt.Name AS MediaType,
+  g.Name AS Genre
+FROM Track t
+LEFT JOIN MediaType mt on mt.MediaTypeId = t.MediaTypeId
+LEFT JOIN Album a ON a.AlbumId = t.AlbumId
+LEFT JOIN Genre g ON g.GenreId = t.GenreId;
 
 -- 16. Provide a query that shows all Invoices but includes the # of invoice line items.
+SELECT
+  i.*,
+  COUNT(*) as LineCount
+FROM Invoice i
+LEFT JOIN InvoiceLine il ON i.InvoiceId = il.InvoiceId
+GROUP BY i.InvoiceId;
 
 -- 17. Provide a query that shows total sales made by each sales agent.
 

@@ -39,9 +39,9 @@ Keep your successful queries in a `chinook.sql` file.
 11. :heavy_check_mark: Provide a query that includes the track name with each invoice line item.
 12. :heavy_check_mark: Provide a query that includes the purchased track name AND artist name with each invoice line item.
 13. :heavy_check_mark: Provide a query that shows the # of invoices per country. HINT: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
-14. Provide a query that shows the total number of tracks in each playlist. The Playlist name should be included on the resultant table.
-15. Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include the Album name, Media type and Genre.
-16. Provide a query that shows all Invoices but includes the # of invoice line items.
+14. :heavy_check_mark: Provide a query that shows the total number of tracks in each playlist. The Playlist name should be included on the resultant table.
+15. :heavy_check_mark: Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include the Album name, Media type and Genre.
+16. :heavy_check_mark: Provide a query that shows all Invoices but includes the # of invoice line items.
 17. Provide a query that shows total sales made by each sales agent.
 18. Which sales agent made the most in sales in 2009?
 19. Which sales agent made the most in sales in 2010?
