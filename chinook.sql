@@ -47,10 +47,29 @@ FROM Invoice i
   LEFT JOIN Employee e ON c.SupportRepId = e.EmployeeId;
 
 -- 8. How many Invoices were there in 2009 and 2011? What are the respective total sales for each of those years?
+SELECT
+  (SELECT
+    COUNT(*)
+  FROM Invoice i
+  WHERE SUBSTR(i.InvoiceDate,0,5) = "2009") AS Invoices09,
+  (SELECT
+    COUNT(*)
+    FROM Invoice i
+    WHERE SUBSTR(i.InvoiceDate,0,5) = "2011") AS Invoices11;
 
 -- 9. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for Invoice ID 37.
+SELECT
+  COUNT(*)
+FROM
+  InvoiceLine il WHERE il.InvoiceId = 37;
 
--- 10. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for each Invoice. HINT: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
+-- 10. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for each Invoice.
+SELECT
+  InvoiceId,
+  COUNT(*)
+FROM
+  InvoiceLine il
+GROUP BY InvoiceId;
 
 -- 11. Provide a query that includes the track name with each invoice line item.
 
