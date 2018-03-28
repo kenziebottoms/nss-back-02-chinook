@@ -119,12 +119,48 @@ LEFT JOIN InvoiceLine il ON i.InvoiceId = il.InvoiceId
 GROUP BY i.InvoiceId;
 
 -- 17. Provide a query that shows total sales made by each sales agent.
+SELECT
+  e.FirstName || " " || e.lastName as Name,
+  COUNT(*) AS Sales
+FROM Employee e
+JOIN Customer c ON c.SupportRepId = e.EmployeeId
+JOIN Invoice i ON i.CustomerId = c.CustomerId
+GROUP BY EmployeeId;
 
 -- 18. Which sales agent made the most in sales in 2009?
+  -- Margaret Park
+SELECT
+  e.FirstName || " " || e.lastName as Name,
+  COUNT(*) AS Sales
+FROM Employee e
+JOIN Customer c ON c.SupportRepId = e.EmployeeId
+JOIN Invoice i ON i.CustomerId = c.CustomerId
+WHERE SUBSTR(i.InvoiceDate,0,5) = "2009"
+GROUP BY EmployeeId
+ORDER BY Sales DESC;
 
 -- 19. Which sales agent made the most in sales in 2010?
+  -- Jane Peacock
+SELECT
+  e.FirstName || " " || e.lastName as Name,
+  COUNT(*) AS Sales
+FROM Employee e
+JOIN Customer c ON c.SupportRepId = e.EmployeeId
+JOIN Invoice i ON i.CustomerId = c.CustomerId
+WHERE SUBSTR(i.InvoiceDate,0,5) = "2010"
+GROUP BY EmployeeId
+ORDER BY Sales DESC;
 
 -- 20. Which sales agent made the most in sales over all?
+  -- Jane Peacock
+SELECT
+  e.FirstName || " " || e.lastName as Name,
+  COUNT(*) AS Sales
+FROM Employee e
+JOIN Customer c ON c.SupportRepId = e.EmployeeId
+JOIN Invoice i ON i.CustomerId = c.CustomerId
+GROUP BY EmployeeId
+ORDER BY Sales DESC;
 
 -- 21. Provide a query that shows the # of customers assigned to each sales agent.
 

@@ -42,10 +42,10 @@ Keep your successful queries in a `chinook.sql` file.
 14. :heavy_check_mark: Provide a query that shows the total number of tracks in each playlist. The Playlist name should be included on the resultant table.
 15. :heavy_check_mark: Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include the Album name, Media type and Genre.
 16. :heavy_check_mark: Provide a query that shows all Invoices but includes the # of invoice line items.
-17. Provide a query that shows total sales made by each sales agent.
-18. Which sales agent made the most in sales in 2009?
-19. Which sales agent made the most in sales in 2010?
-20. Which sales agent made the most in sales over all?
+17. :heavy_check_mark: Provide a query that shows total sales made by each sales agent.
+18. :heavy_check_mark: Which sales agent made the most in sales in 2009?
+19. :heavy_check_mark: Which sales agent made the most in sales in 2010?
+20. :heavy_check_mark: Which sales agent made the most in sales over all?
 21. Provide a query that shows the # of customers assigned to each sales agent.
 22. Provide a query that shows the total sales per country. Which country's customers spent the most?
 23. Provide a query that shows the most purchased track of 2013.
