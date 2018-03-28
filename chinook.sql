@@ -17,8 +17,7 @@ SELECT
   i.InvoiceDate,
   c.Country
 FROM Customer c
-LEFT JOIN
-  Invoice i ON i.CustomerId = c.CustomerId
+LEFT JOIN Invoice i ON i.CustomerId = c.CustomerId
 WHERE c.Country IS "Brazil";
 
 -- 4. Provide a query showing only the Employees who are Sales Agents.
@@ -60,22 +59,37 @@ SELECT
 -- 9. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for Invoice ID 37.
 SELECT
   COUNT(*)
-FROM
-  InvoiceLine il WHERE il.InvoiceId = 37;
+FROM InvoiceLine il WHERE il.InvoiceId = 37;
 
 -- 10. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for each Invoice.
 SELECT
   InvoiceId,
   COUNT(*)
-FROM
-  InvoiceLine il
+FROM InvoiceLine il
 GROUP BY InvoiceId;
 
 -- 11. Provide a query that includes the track name with each invoice line item.
+SELECT
+  t.Name,
+  il.*
+FROM InvoiceLine il
+LEFT JOIN Track t ON t.TrackId = il.TrackId;
 
 -- 12. Provide a query that includes the purchased track name AND artist name with each invoice line item.
+SELECT
+  t.Name as Song,
+  ar.Name AS Artist,
+  il.* FROM InvoiceLine il
+LEFT JOIN Track t ON t.TrackId = il.TrackId
+LEFT JOIN Album al ON al.AlbumId = t.AlbumId
+LEFT JOIN Artist ar ON ar.ArtistId = al.ArtistId;
 
--- 13. Provide a query that shows the # of invoices per country. HINT: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
+-- 13. Provide a query that shows the # of invoices per country.
+SELECT
+  Invoice.BillingCountry,
+  COUNT(*)
+FROM Invoice
+GROUP BY BillingCountry;
 
 -- 14. Provide a query that shows the total number of tracks in each playlist. The Playlist name should be included on the resultant table.
 

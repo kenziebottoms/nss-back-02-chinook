@@ -36,9 +36,9 @@ Keep your successful queries in a `chinook.sql` file.
 8. :heavy_check_mark: How many Invoices were there in 2009 and 2011? What are the respective total sales for each of those years?
 9. :heavy_check_mark: Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for Invoice ID 37.
 10. :heavy_check_mark: Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for each Invoice. HINT: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
-11. Provide a query that includes the track name with each invoice line item.
-12. Provide a query that includes the purchased track name AND artist name with each invoice line item.
-13. Provide a query that shows the # of invoices per country. HINT: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
+11. :heavy_check_mark: Provide a query that includes the track name with each invoice line item.
+12. :heavy_check_mark: Provide a query that includes the purchased track name AND artist name with each invoice line item.
+13. :heavy_check_mark: Provide a query that shows the # of invoices per country. HINT: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
 14. Provide a query that shows the total number of tracks in each playlist. The Playlist name should be included on the resultant table.
 15. Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include the Album name, Media type and Genre.
 16. Provide a query that shows all Invoices but includes the # of invoice line items.
