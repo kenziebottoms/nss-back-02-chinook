@@ -29,9 +29,22 @@ WHERE Title LIKE "%Sale%Agent%";
 SELECT BillingCountry FROM Invoice GROUP BY BillingCountry;
 
 -- 6. Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name.
--- How are any Employees associated with Invoices? Not seeing this.
+SELECT
+  i.InvoiceId,
+  (e.FirstName || " " || e.LastName) as Name
+FROM Invoice i
+  LEFT JOIN Customer c ON c.CustomerId = i.CustomerId
+  LEFT JOIN Employee e ON c.SupportRepId = e.EmployeeId;
 
 -- 7. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers.
+SELECT
+  (c.FirstName || " " || c.LastName) as CustomerName,
+  (e.FirstName || " " || e.LastName) as SalesAgentName,
+  i.Total,
+  i.BillingCountry
+FROM Invoice i
+  LEFT JOIN Customer c ON c.CustomerId = i.CustomerId
+  LEFT JOIN Employee e ON c.SupportRepId = e.EmployeeId;
 
 -- 8. How many Invoices were there in 2009 and 2011? What are the respective total sales for each of those years?
 
