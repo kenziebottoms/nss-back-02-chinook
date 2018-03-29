@@ -181,11 +181,48 @@ GROUP BY BillingCountry
 ORDER BY SUM(Total) DESC;
 
 -- 23. Provide a query that shows the most purchased track of 2013.
+  -- All track were purchased no more than once.
+SELECT
+  t.TrackId,
+  COUNT(*)
+FROM InvoiceLine il
+JOIN Track t ON t.TrackId = il.TrackId
+JOIN Invoice i ON i.InvoiceId = il.InvoiceId
+WHERE SUBSTR(i.InvoiceDate,0,5) = "2013"
+GROUP BY il.TrackId
+ORDER BY COUNT(*) DESC;
 
 -- 24. Provide a query that shows the top 5 most purchased tracks over all.
+  -- There are at least 50 tied for first place.
+SELECT
+  t.TrackId,
+  COUNT(*)
+FROM InvoiceLine il
+JOIN Track t ON t.TrackId = il.TrackId
+GROUP BY il.TrackId
+ORDER BY COUNT(*) DESC;
 
 -- 25. Provide a query that shows the top 3 best selling artists.
+SELECT
+  ar.Name,
+  COUNT(*)
+FROM InvoiceLine il
+LEFT JOIN Track t ON t.TrackId = il.TrackId 
+LEFT JOIN Album al ON al.AlbumId = t.AlbumId
+LEFT JOIN Artist ar ON ar.ArtistId = al.ArtistId
+GROUP BY ar.ArtistId
+ORDER BY COUNT(*) DESC
+LIMIT 3;
 
 -- 26. Provide a query that shows the most purchased Media Type.
+  -- MPEG
+SELECT
+  mt.Name,
+  COUNT(*)
+FROM InvoiceLine il
+LEFT JOIN Track t ON t.TrackId = il.TrackId
+LEFT JOIN MediaType mt ON mt.MediaTypeId = t.MediaTypeId
+GROUP BY t.MediaTypeId
+ORDER BY COUNT(*) DESC;
 
 -- 27. Provide a query that shows the number tracks purchased in all invoices that contain more than one genre.

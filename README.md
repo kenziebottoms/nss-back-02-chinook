@@ -48,8 +48,8 @@ Keep your successful queries in a `chinook.sql` file.
 20. :heavy_check_mark: Which sales agent made the most in sales over all?
 21. :heavy_check_mark: Provide a query that shows the # of customers assigned to each sales agent.
 22. :heavy_check_mark: Provide a query that shows the total sales per country. Which country's customers spent the most?
-23. Provide a query that shows the most purchased track of 2013.
-24. Provide a query that shows the top 5 most purchased tracks over all.
-25. Provide a query that shows the top 3 best selling artists.
-26. Provide a query that shows the most purchased Media Type.
-27. Provide a query that shows the number tracks purchased in all invoices that contain more than one genre.
+23. :heavy_check_mark: Provide a query that shows the most purchased track of 2013.
+24. :heavy_check_mark: Provide a query that shows the top 5 most purchased tracks over all.
+25. :heavy_check_mark: Provide a query that shows the top 3 best selling artists.
+26. :heavy_check_mark: Provide a query that shows the most purchased Media Type.
+27. :question: Provide a query that shows the number tracks purchased in all invoices that contain more than one genre.
