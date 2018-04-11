@@ -1,5 +1,7 @@
 # Chinook database exercises
 
+![](https://img.shields.io/badge/mvp-working-green.svg)
+
 SQL query exercise copied from [this repo](https://github.com/nashville-software-school/bangazon-corp/tree/master/post-orientation-exercises/chinook).
 
 ## Part 1: ERD
@@ -9,8 +11,8 @@ Before we move on to shiny, new things we are going to ramp up the difficulty a 
 
 ### Requirements
 
-1. Open [the Chinook database](assets/db.sqlite) in DB Browser.
-1. Build an ERD.
+1. :heavy_check_mark: Open [the Chinook database](assets/db.sqlite) in DB Browser.
+1. :heavy_check_mark: Build an ERD.
     
     :warning: Be a good, honest, upstanding citizen and don't click the link on the Chinook home page to view the data model or search Google images for "Chinook database". Do your best to glean the relationships from the tables and make a complete ERD before peeking to see if you've hit the mark.
 
